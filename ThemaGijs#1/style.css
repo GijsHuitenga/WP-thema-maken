@@ -1,0 +1,118 @@
+
+/* 
+Theme name: Het thema van Gijs
+Author: Gijs Huitenga
+Author URI: http://gijs-huitenga.nl/index.html
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+	font-family: Quicksand;
+	background-color: #f1f1f1;
+	color: #333;
+	margin: 0;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+a {
+	color: #cc3439;
+	text-decoration: none;
+}
+
+/*layout*/
+.bericht {
+	border-bottom: 6px double #cc3439;
+}
+
+.bericht:last-of-type {
+	border: 0;
+}
+
+.container {
+	padding: 0 2em;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container img {
+	max-width: 100%;
+}
+
+/*opmaak header*/
+header {
+	background-color: #dbdbdb;
+	color: #f1f1f1;
+	background-size: cover;
+	background-position: center center;
+	min-height: 40vw;
+}
+
+header a {
+	color: #cc3439;
+	text-decoration: none;
+}
+
+/*opmaak menu*/
+nav {
+	margin-left: -2em;
+	margin-right: -2em;
+}
+
+nav ul.menu {
+	list-style-type: none;
+	font-size: 1.3em;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul.menu a {
+	text-decoration: none;
+	display: block;
+	background-color: #dbdbdb;
+	padding: .5em 2em;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+nav ul.menu a:hover {
+	background-color: #cc3439;
+	color: #fff;
+}
+
+nav .menu .current-menu-item a {
+	background-color: #cc3439;
+	border-right: .5em solid #333;
+	color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+
+	nav ul.menu {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+	}
+
+	nav ul.menu a {
+		border-right: 1px solid #f1f1f1;
+	}
+
+	nav #menu-footermenu a {
+		font-size: .8em;
+	}
+
+}
+
+/*opmaak footer*/
+footer {
+	background-color: #dbdbdb;
+	color: #333;
+}
+
+footer a {
+	color: #cc3439;
+	text-decoration: none;
+}
