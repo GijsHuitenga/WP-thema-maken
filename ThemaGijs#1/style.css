@@ -49,7 +49,7 @@ header {
 	color: #f1f1f1;
 	background-size: cover;
 	background-position: center center;
-	min-height: 40vw;
+	min-height: 30vw;
 }
 
 header a {
@@ -89,6 +89,43 @@ nav .menu .current-menu-item a {
 	color: #fff;
 }
 
+/* submenu */
+.sub-menu {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 1em;
+}
+
+.sub-menu * {
+	transition: all .5s ease-out;
+}
+
+.sub-menu.verbergen-sub-menu {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+	border-width: 0;
+}
+
+.menu-item-has-children>a.menu-open {
+	padding-top: .4em;
+}
+
+.menu-item-has-children>a::before {
+	content: '\25BC';
+	margin-right: 1em;
+}
+
+.menu-item-has-children>a.menu-open::before {
+	content: '\25B2';
+	margin-right: 1em;
+}
+
+.sub-menu a {
+	border-left: 1em solid #cc3439;
+}
+
 @media screen and (min-width: 800px) {
 
 	nav ul.menu {
@@ -106,7 +143,12 @@ nav .menu .current-menu-item a {
 
 }
 
-/*opmaak footer*/
+/* opmaak submenu */
+.sub-menu {
+	position: absolute;
+}
+
+/* opmaak footer */
 footer {
 	background-color: #dbdbdb;
 	color: #333;

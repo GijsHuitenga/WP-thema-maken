@@ -4,6 +4,7 @@
 //connect style.css
 function themaGijs_bronnen() {
 
+	wp_enqueue_script('gijs-scripts', get_theme_file_uri('/js/script.js'), NULL, '1.0', true);
 	wp_enqueue_style('style', get_stylesheet_uri());
 
 }
