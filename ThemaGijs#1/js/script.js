@@ -17,3 +17,8 @@ for (let i = 0; i < heeftSubmenu.length; i++) {
 	});
 
 }
+
+// placeholder text en type zoekvenster
+let zoekVenster = document.getElementById('s');
+zoekVenster.setAttribute('placeholder', 'Zoeken...');
+zoekVenster.setAttribute('type', 'search');

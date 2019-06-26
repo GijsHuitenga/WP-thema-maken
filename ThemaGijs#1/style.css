@@ -6,10 +6,8 @@ Author URI: http://gijs-huitenga.nl/index.html
 Version: 1.0
 */
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
 body {
-	font-family: Quicksand;
+	font-family: 'Montserrat', sans-serif;
 	background-color: #f1f1f1;
 	color: #333;
 	margin: 0;
@@ -126,6 +124,85 @@ nav .menu .current-menu-item a {
 	border-left: 1em solid #cc3439;
 }
 
+.zoek-term-kop {
+	color: #cc3439;
+}
+
+aside h4 {
+	color: #cc3439;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+aside input#s {
+	background-color: #ffffff;
+	border-radius: 2px;
+	color: #333;
+	font-size: 14px;
+	border: 1px solid #cccccc;
+	padding: 6px 10px;
+	margin-bottom: 1em;
+}
+
+aside input#searchsubmit {
+	background-color: #eeeeee;
+	border: 1px solid #dddddd;
+	color: #333333;
+	font-size: .8em;
+	padding: 5px 7.5px;
+}
+
+aside input#searchsubmit:hover {
+	background-color: #dddddd;
+	border: 1px solid #cecccc;
+	cursor: pointer;
+}
+
+aside select#cat {
+	background-color: #ffffff;
+	border-radius: 2px;
+	color: #333;
+	font-size: 14px;
+	border: 1px solid #cccccc;
+	padding: 6px 10px;
+	width: 12.2em;
+}
+
+aside img.so-widget-image {
+	margin-top: 1em;
+}
+
+.post-meta-data {
+	font-size: .8em;
+	color: #aaaaaa;
+	margin-bottom: 1em;
+}
+
+.post-meta-data a {
+	color: #aaaaaa;
+}
+
+.post-meta-data a:hover {
+	color: #cc3439;
+}
+
+.post-meta-data ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.post-meta-data li {
+	display: inline;
+}
+
+.post-meta-data li::after {
+	content: ' | ';
+}
+
 @media screen and (min-width: 800px) {
 
 	nav ul.menu {
@@ -137,10 +214,39 @@ nav .menu .current-menu-item a {
 		border-right: 1px solid #f1f1f1;
 	}
 
+	nav ul.menu {
+		border-left: 1px solid #f1f1f1;
+	}
+
 	nav #menu-footermenu a {
 		font-size: .8em;
 	}
 
+	/*opmaak van main*/
+	main {
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		grid-column-gap: 5em;
+	}
+
+	aside {
+		border-right: 1px solid #dbdbdb;
+		margin-right: -2em;
+	}
+
+}
+
+form.comment-form p.comment-form-comment label {
+	display: none;
+}
+
+form.comment-form p.comment-form-comment textarea#comment {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	color: #333;
+	font-size: 14px;
+	padding: 6px 10px;
 }
 
 /* opmaak submenu */
@@ -157,4 +263,8 @@ footer {
 footer a {
 	color: #cc3439;
 	text-decoration: none;
+}
+
+footer div.container nav {
+	margin-bottom: 1.5em;
 }
